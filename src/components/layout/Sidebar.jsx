@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { Badge } from '../ui';
+import InstallButton from '../InstallButton';
 
 const navLinks = [
   { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
@@ -126,6 +127,7 @@ const Sidebar = () => {
             </p>
             <Badge status={user.role || 'STAFF'} className="text-[10px] mt-0.5" />
           </div>
+          <InstallButton />
           <button
             onClick={handleLogout}
             className="p-1.5 rounded-lg hover:bg-app-bg-secondary text-app-text-muted hover:text-app-danger transition"

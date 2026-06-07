@@ -19,6 +19,7 @@ import {
   ClipboardList,
   LogOut,
 } from 'lucide-react';
+import InstallButton from '../InstallButton';
 
 const mainLinks = [
   { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
@@ -131,7 +132,11 @@ const MobileNav = () => {
                   );
                 })}
               </div>
-              <div className="p-3 border-t border-app-border">
+              <div className="p-3 border-t border-app-border space-y-1">
+                <div className="flex items-center gap-2 px-3 py-1">
+                  <InstallButton />
+                  <span className="text-xs text-app-text-muted">Install app</span>
+                </div>
                 <button
                   onClick={handleLogout}
                   className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-app-danger hover:bg-app-bg-tertiary"
